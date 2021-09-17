@@ -1,0 +1,50 @@
+//===========================================
+	// -Mixins start
+//===========================================
+
+// conver px to rem
+@function rem($pixels, $context: 16) {
+  @return ($pixels / $context) * 1rem;
+}
+
+@mixin hr-div($height, $width){
+	height: $height;
+	width: $width;
+	background-color: $supporting-4;
+}
+
+// Media Query
+@mixin mq($breakpoint, $type: min) {
+	// Checking $breakpoint value in $grid-breakpoints object value
+	@if map_has_key($grid-breakpoints, $breakpoint) {
+			// getting $grid-breakpoints object value and asign width
+			$width: map_get($grid-breakpoints, $breakpoint);
+			// Decrease 1px from $grid-breakpoints value for max-width $type
+			@if $type == max {
+					$width: $width - 1px;
+			}
+			// Print Media query
+			@media (#{$type}-width: $width) {
+					@content;
+			}
+	}
+}
+
+@mixin mq-only($min-width, $max-width) {
+	@if map_has_key($grid-breakpoints, $min-width) and map_has_key($grid-breakpoints, $max-width){
+			// define value to relevant$grid-breakpoints
+			$min-width : map_get($grid-breakpoints, $min-width);
+			$max-width : map_get($grid-breakpoints, $max-width) - 1px;
+			
+			@media (min-width: $min-width) and (max-width: $max-width) {
+					@content;
+			}
+	}
+	@else {
+		@error "Please Define correct media query breakpoint";
+	}
+}
+
+//===========================================
+	// -Mixins end
+//===========================================

@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'car-shop';
+  src:  url('../fonts/car-shop.eot?b61vaw');
+  src:  url('../fonts/car-shop.eot?b61vaw#iefix') format('embedded-opentype'),
+    url('../fonts/car-shop.ttf?b61vaw') format('truetype'),
+    url('../fonts/car-shop.woff?b61vaw') format('woff'),
+    url('../fonts/car-shop.svg?b61vaw#car-shop') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-cs"], [class*=" icon-cs"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'car-shop' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-csuser:before {
+  content: "\e900";
+}
+.icon-csshopping-cart-black-shape:before {
+  content: "\e901";
+}
+.icon-cschecked:before {
+  content: "\e902";
+}
+.icon-csmusica-searcher:before {
+  content: "\e903";
+}
+.icon-cssmartphone:before {
+  content: "\e904";
+}
+.icon-csstar:before {
+  content: "\e905";
+}
+.icon-cssports-car:before {
+  content: "\e906";
+}
+.icon-csstar-half-empty:before {
+  content: "\e907";
+}
+.icon-csfacebook-logo:before {
+  content: "\e908";
+}
+.icon-cstwitter-logo-silhouette:before {
+  content: "\e909";
+}
+.icon-csgoogle-plus:before {
+  content: "\e90a";
+}
+.icon-csinstagram-logo:before {
+  content: "\e90b";
+}
+.icon-cspinterest:before {
+  content: "\e90c";
+}
+.icon-cslocation-pointer:before {
+  content: "\e90d";
+}
+.icon-csphone-receiver:before {
+  content: "\e90e";
+}
+.icon-csclock:before {
+  content: "\e90f";
+}
+.icon-csenvelope:before {
+  content: "\e910";
+}
+.icon-cspaypal-logo:before {
+  content: "\e911";
+}
+.icon-csvisa:before {
+  content: "\e912";
+}
+.icon-csmaster-card-logo:before {
+  content: "\e913";
+}

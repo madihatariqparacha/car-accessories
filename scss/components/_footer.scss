@@ -1,0 +1,298 @@
+//===========================================
+	// -Footer start
+//===========================================
+
+%title-properties {
+	margin: 0;
+	margin-bottom: rem(12);
+	font-size: rem(25);
+	display: inline-block;
+}
+
+footer{
+	background-color: #000000;
+
+	.top-footer, .mid-footer{
+		padding-top: rem(100);
+
+		.top-footer-container, .mid-footer-container{
+			padding-bottom: rem(100);
+
+			@include mq('md', max){
+				padding-bottom: rem(12);
+			}
+		}
+
+		@include mq('md', max){
+			padding-top: rem(12);
+		}
+	}
+	
+	
+}
+
+// top footer quick links
+
+
+.quick-links-parent{
+	float: left;
+	padding-left: rem(20);
+}
+
+.quick-links-child {
+	float: left;
+	padding-right: rem(120);
+	width: calc(100% / 4);
+
+	@include mq('lg', max){
+		padding-right: rem(8);
+	}
+	
+	h2{
+		@extend %title-properties;
+	}
+
+	a {
+		display: block;
+		font-size: rem(15);
+		color: #ff3448;
+		text-decoration: none;
+		font-weight: bold;
+		padding: rem(10) 0;
+
+		@include mq('md', max){
+			font-size: rem(16);
+		}
+	}
+}
+
+
+
+.quick-links-child a:hover {
+	color: $on-active;
+}
+
+.quick-links-child a:active {
+	color: $default-font-color;
+}
+
+// top footer form
+.top-footer-newsletter-form{
+	float: left;
+	width: calc(100% / 4);
+	padding: rem(10);
+	padding-top: 0;
+
+	.newsletter-form-title {
+		@extend %title-properties;
+	}
+
+	.newsletter-form-descrip{
+		color: $for-footer-fonts;
+
+		@include mq('md', max){
+			font-size: rem(16);
+		}
+	}
+
+	.follow-links{
+		margin-top: rem(90);
+
+		.follow-link-item {
+			color: $default-font-color;
+			text-decoration: none;
+			font-size: rem(25);
+			margin-right: rem(20);
+			text-align: center;
+			display: inline-block;
+			transition: all 0.8s ease-in-out;
+
+			@include mq('lg', max){
+				margin-right: rem(10);
+			}
+
+			:hover {
+				color: $supporting-1;
+			}
+		}
+
+		
+
+		@include mq('md', max){
+			margin-top: rem(20);
+
+		}
+	}
+}
+
+
+//  mid footer
+//mid footer - information section
+.mid-footer-information{
+	margin-right: rem(80);
+
+	@include mq('lg', max){
+		margin-right: rem(20);
+	}
+
+}
+
+.mid-footer-information, .mid-footer-contact-info{
+	float: left;
+	max-width: 30%;
+	padding-left: rem(20);
+
+	@include mq('md', max){
+		max-width: 100%;
+	}
+
+
+	h2{
+		@extend %title-properties;
+	}
+
+	.information-description, .contact-details{
+		color: $for-footer-fonts;
+		font-size: rem(15);
+
+
+	}
+}
+
+.mid-footer-contact-info{
+	.title-wrapper{
+		width: 50%;
+	}
+}
+
+
+.contact-details{
+	i {
+		color: $supporting-4;
+		margin-right: rem(20);
+
+		@include mq('lg', max){
+			margin-right: rem(10);
+		}
+	}
+}
+
+.contact-details p:hover{
+	i{
+		color: $default-font-color;
+	}
+}
+
+// bottom footer
+.bottom-footer{
+	padding: rem(45) rem(20);
+
+	.bottom-footer-copyright{
+		color: $default-font-color;
+		font-size: rem(15);
+		float: left;
+
+		span {
+			color: $for-footer-fonts;
+		}
+	}
+
+	.bottom-footer-payment-info{
+		float: right;
+		.payment-info-item{
+			color: $default-font-color;
+			font-size: rem(40);
+			text-decoration: none;
+			margin-left: rem(20);
+
+			@include mq('sm', max){
+				font-size: rem(30);
+			}
+		}
+
+	}
+}
+
+
+
+@include mq-only('sm', 'md'){
+	.quick-links-parent{
+		float: none;
+		display: inline-block;
+		text-align: center;
+
+		.quick-links-child{
+			float: none;
+			display: inline-block;
+			width: 40%;
+			padding: rem(40) rem(10);
+		}
+
+		.top-footer-newsletter-form{
+			width: 40%;
+			font-size: rem(18);
+		}
+
+		.title {
+			&:after{
+				margin: 0 auto;
+				margin-top: rem(16);
+			}
+		}
+
+	}
+
+	.top-footer-newsletter-form{
+		float: none;
+		display: inline-block;
+	}
+
+	.mid-footer-contact-info{
+		padding-left: rem(20);
+	}
+}
+
+@include mq-only('xs', 'sm'){
+	.quick-links-parent{
+		text-align: center;
+	}
+
+	.quick-links-child, .top-footer-newsletter-form {
+		width: 100%;
+		padding: rem(40) rem(10);
+		display: block;
+		margin: 0 auto;
+
+		.title {
+			&:after{
+				margin: 0 auto;
+				margin-top: rem(16);
+			}
+		}
+
+	}
+
+	.mid-footer-information {
+		padding: rem(16);
+	}
+
+	.mid-footer-information, .mid-footer-contact-info {
+		width: 100%;
+		padding-top: rem(30);
+	}
+
+	.mid-footer-contact-info{
+		padding-left: rem(20);
+
+	}
+
+	.mid-footer{
+		.information-description, .contact-details {
+			font-size: rem(16);
+		}
+	}
+
+}
+//===========================================
+	// -Footer end
+//===========================================

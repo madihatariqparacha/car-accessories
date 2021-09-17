@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Accessories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
+    <!-- Animate.CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+    <!-- Customized -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+
+<body onload="init()">
+    <div class="main-container">
+
+        <header class="main-header" id="home">
+            <div class="top-header">
+                <!-- top bar -->
+                <div class="top-bar animated faster">
+
+
+                    <div class="container clearfix border-bottom">
+                        <!-- top-bar -->
+                        <div class="top-bar-nav clearfix">
+                            <nav class="top-navbar">
+                                <ul class="top-bar-navbar clearfix">
+                                    <li class="top-navbar-item">
+                                        <a href="#"><i class="icon-csuser"></i> My Account</a>
+                                    </li>
+
+                                    <li class="top-navbar-item">
+                                        <a href="#"><i class="icon-csshopping-cart-black-shape"></i> Cart</a>
+                                    </li>
+
+                                    <li class="top-navbar-item">
+                                        <a href="#"><i class="icon-cschecked"></i> Checkout</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <!-- Search buttn -->
+                            <div class="search-section">
+
+                                <div class="top-bar-search btn" onclick="showSearchBox()">
+                                    <i class="icon-csmusica-searcher"></i>
+                                </div>
+
+                                <div class="input-pop-up animated faster clearfix">
+                                    
+                                    <button class="close-pop-up-btn" onclick="closeSearchBox()">
+                                        <i class="far fa-times-circle"></i>
+                                    </button>
+                                    <input type="text" id="search-input"  placeholder="Search" />
+                                </div>
+
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- main-bar -->
+                <div class="main-bar animated faster">
+                    <div class="container clearfix">
+                        <!-- brand -->
+                        <div class="main-bar-brand">
+                            <a href="#" class="brand-link">
+                                <img src="images/logo.png" alt="logo">
+                            </a>
+                        </div>
+
+                        <!-- main-bar-navbar -->
+                        <div class="main-bar-nav clearfix">
+
+                            <!-- phone and timings -->
+                            <div class="main-bar-phone-timing text-right">
+                                <p class="main-phone-timings">
+                                    <i class="icon-cssmartphone"></i> +123 456 7890
+                                    <br>
+                                    <span>MON-FRI: 8:30AM-7:30PM; SAT-SUN: 9:30AM-4:30PM</span>
+                                </p>
+                            </div>
+
+                            <!-- purchasing options -->
+                            <div class="main-bar-purchase-opt clearfix">
+                                <ul class="purchase-navbar clearfix">
+
+                                    <li class="purchase-navbar-item">
+                                        <a href="#" class="purchase-navbar-item-link">
+                                            <i class="icon-csshopping-cart-black-shape"></i><br>
+                                            MY CART
+                                        </a>
+                                    </li>
+
+                                    <li class="purchase-navbar-item">
+                                        <a href="#" class="purchase-navbar-item-link">
+                                            <i class="icon-cssports-car"></i><br>
+                                            COMPARE
+                                        </a>
+                                    </li>
+
+                                    <li class="purchase-navbar-item">
+                                        <a href="#" class="purchase-navbar-item-link">
+                                            <i class="icon-csstar"></i><br>
+                                            WISHLIST
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sub bar navigation bar -->
+                <nav class="sub-bar-navigation">
+                    <div class="container clearfix">
+
+                        <!-- collapse button -->
+                        <div class="collapse">
+                            <button class="collapse-btn" id="collapse-open-btn" onclick="openCollapseMenu()">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+
+                        <!-- collpase navbar -->
+                        <div class="collapse-nav animated faster">
+
+                            <!-- collapse close button -->
+                            <div class="close-nav">
+                                <button class="collapse-btn" id="collapse-close-btn" onclick="closeMenu()">
+                                    <i class="far fa-times-circle"></i>
+                                </button>
+                            </div>
+
+                            <!-- navigation in collapse-->
+                            <ul class="collapse-navbar">
+                                <li class="collapse-navbar-item">
+                                    <a href="#home" class="collapse-navbar-item-link">HOME</a>
+                                </li>
+
+                                <li class="collapse-navbar-item">
+                                    <a href="#offer" class="collapse-navbar-item-link">SERVICES</a>
+                                </li>
+
+                                <li class="collapse-navbar-item">
+                                    <a href="#about" class="collapse-navbar-item-link">ABOUT</a>
+                                </li>
+
+                                <li class="collapse-navbar-item">
+                                    <a href="#feature-products" class="collapse-navbar-item-link">REVIEWS</a>
+                                </li>
+
+                                <li class="collapse-navbar-item">
+                                    <a href="#location" class="collapse-navbar-item-link">LOCATIONS</a>
+                                </li>
+
+                                <li class="collapse-navbar-item">
+                                    <a href="#contact" class="collapse-navbar-item-link">CONTACTS</a>
+                                </li>
+                            </ul>
+
+                            <!-- timings in collapse -->
+                            <div class="main-bar-phone-timing collapse-bar-timings">
+                                <p class="main-phone-timings">
+                                    <i class="icon-cssmartphone"></i> +123 456 7890
+                                    <br>
+                                    <span>MON-FRI: 8:30AM-7:30PM; SAT-SUN: 9:30AM-4:30PM</span>
+                                </p>
+                            </div>
+
+                            <!-- collapse top navbar -->
+                            <nav class="collapse-top-navbar">
+                                <ul class="collapse-top-nav clearfix">
+                                    <li class="collapse-top-navbar-item">
+                                        <a href="#"><i class="icon-csuser"></i> My Account</a>
+                                    </li>
+
+                                    <li class="collapse-top-navbar-item">
+                                        <a href="#"><i class="icon-csshopping-cart-black-shape"></i> Cart</a>
+                                    </li>
+
+                                    <li class="collapse-top-navbar-item">
+                                        <a href="#"><i class="icon-cschecked"></i> Checkout</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <!-- purchasing opt in collapse -->
+                            <div class="collapse-bar-purchase-opt">
+                                <ul class="purchase-collapse-navbar">
+
+                                    <li class="purchase-colps-navbar-item">
+                                        <a href="#" class="purchase-colps-navbar-item-link">
+                                            <i class="icon-csshopping-cart-black-shape"></i>
+                                            MY CART
+                                        </a>
+                                    </li>
+
+                                    <li class="purchase-colps-navbar-item">
+                                        <a href="#" class="purchase-colps-navbar-item-link">
+                                            <i class="icon-cssports-car"></i>
+                                            COMPARE
+                                        </a>
+                                    </li>
+
+                                    <li class="purchase-colps-navbar-item">
+                                        <a href="#" class="purchase-colps-navbar-item-link">
+                                            <i class="icon-csstar"></i>
+                                            WISHLIST
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="sub-nav animated faster">
+                            <ul class="sub-navbar clearfix">
+                                <li class="sub-navbar-item">
+                                    <a href="#home" class="sub-navbar-item-link">HOME</a>
+                                </li>
+
+                                <li class="sub-navbar-item">
+                                    <a href="#offer" class="sub-navbar-item-link">SERVICES</a>
+                                </li>
+
+                                <li class="sub-navbar-item">
+                                    <a href="#about" class="sub-navbar-item-link">ABOUT</a>
+                                </li>
+
+                                <li class="sub-navbar-item">
+                                    <a href="#feature-products" class="sub-navbar-item-link">REVIEWS</a>
+                                </li>
+
+                                <li class="sub-navbar-item">
+                                    <a href="#location" class="sub-navbar-item-link">LOCATIONS</a>
+                                </li>
+
+                                <li class="sub-navbar-item">
+                                    <a href="#contact" class="sub-navbar-item-link">CONTACTS</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        
+                    </div>
+
+
+
+                </nav>
+
+
+
+            </div>
+
+            <!-- header banner image -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide haeder-banner" id="slide-1"></div>
+                    <div class="swiper-slide haeder-banner" id="slide-2"></div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev swiper-button">
+                    <i class="fas fa-angle-left"></i>
+                </div>
+
+                <div class="swiper-button-next swiper-button">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+
+
+            </div>
+        </header>
+
+        <!-- further body content -->
+        <article class="article-content">
+
+            <!-- product showcase section -->
+            <div class="product-showcase clearfix" id="about">
+
+                <!-- item-1 -->
+                <div class="showcase-item">
+                    <div class="showcase-item-detail">
+                        <h2 class="showcase-item-title">HEADLIGHTS</h2>
+                        <h4 class="showcase-item-description">Headlights Projector, LED, Factory</h4>
+                    </div>
+
+                    <div class="showcase-item-1-pic">
+                        <img src="images/product-1.png" alt="product image">
+                    </div>
+                </div>
+
+                <!-- item-2 -->
+                <div class="showcase-item">
+                    <div class="showcase-item-detail">
+                        <h2 class="showcase-item-title">HEADLIGHTS</h2>
+                        <h4 class="showcase-item-description">Headlights Projector, LED, Factory</h4>
+                    </div>
+
+                    <div class="showcase-item-2-pic">
+                        <img src="images/product-2.png" alt="product image">
+                    </div>
+                </div>
+
+                <!-- item-3 -->
+                <div class="showcase-item">
+                    <div class="showcase-item-detail">
+                        <h2 class="showcase-item-title">HEADLIGHTS</h2>
+                        <h4 class="showcase-item-description">Headlights Projector, LED, Factory</h4>
+                    </div>
+
+                    <div class="showcase-item-3a-pic">
+                        <img src="images/product-3.png" alt="product image">
+                    </div>
+                </div>
+
+                <!-- item-4 -->
+                <div class="showcase-item">
+                    <div class="showcase-item-detail">
+                        <h2 class="showcase-item-title">HEADLIGHTS</h2>
+                        <h4 class="showcase-item-description">Headlights Projector, LED, Factory</h4>
+                    </div>
+
+                    <div class="showcase-item-4-pic">
+                        <img src="images/product-4.png" alt="product image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- featured products -->
+            <div class="featured-products" id="feature-products">
+                <div class="fluid-container clearfix">
+                    <div class="title-wrapper">
+                        <h2 class="featured-products-title text-center title">FEATURED PRODUCTS</h2>
+
+                    </div>
+
+
+                    <!-- featured product 1 -->
+                    <div class="featured-product-item">
+                        <div class="featured-product-img table">
+                            <div class="cell">
+                                <img src="images/accessory-1.png" class="featured-img" alt="featured product 1">
+                            </div>
+                        </div>
+
+                        <div class="featued-product-detail">
+                            <h4 class="featured-item-title">HEADLIGHTS</h4>
+                            <h3 class="featured-item-price">$ 300.00</h3>
+                            <p class="featured-item-rating">
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar-half-empty"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- featured product 2 -->
+                    <div class="featured-product-item">
+                        <div class="featured-product-img">
+                            <div class="cell">
+                                <img src="images/accessory-2.png" class="featured-img" alt="featured product 1">
+                            </div>
+                        </div>
+                        <div class="featued-product-detail">
+                            <h4 class="featured-item-title">HEADLIGHTS</h4>
+                            <h3 class="featured-item-price">$ 300.00</h3>
+                            <p class="featured-item-rating">
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar-half-empty"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- featured product 3 -->
+                    <div class="featured-product-item">
+                        <div class="featured-product-img">
+                            <div class="cell">
+                                <img src="images/accessory-3.png" class="featured-img" alt="featured product 1">
+                            </div>
+                        </div>
+                        <div class="featued-product-detail">
+                            <h4 class="featured-item-title">HEADLIGHTS</h4>
+                            <h3 class="featured-item-price">$ 300.00</h3>
+                            <p class="featured-item-rating">
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar-half-empty"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- featured product 4 -->
+                    <div class="featured-product-item">
+                        <div class="featured-product-img">
+                            <div class="cell">
+                                <img src="images/accessory-4.png" class="featured-img" alt="featured product 1">
+                            </div>
+                        </div>
+                        <div class="featued-product-detail">
+                            <h4 class="featured-item-title">HEADLIGHTS</h4>
+                            <h3 class="featured-item-price">$ 300.00</h3>
+                            <p class="featured-item-rating">
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar-half-empty"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- featured product 5 -->
+                    <div class="featured-product-item">
+                        <div class="featured-product-img">
+                            <div class="cell">
+                                <img src="images/accessory-5.png" class="featured-img" alt="featured product 1">
+                            </div>
+                        </div>
+                        <div class="featued-product-detail">
+                            <h4 class="featured-item-title">HEADLIGHTS</h4>
+                            <h3 class="featured-item-price">$ 300.00</h3>
+                            <p class="featured-item-rating">
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar"></i>
+                                <i class="icon-csstar-half-empty"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- deals offer section -->
+            <div class="deal-offer-section" id="offer">
+                <div class="deal-offer-bg-layer">
+                    <div class="container clearfix">
+
+                        <!-- offer 1 -->
+                        <div class="offer offer-1">
+                            <h1 class="offer-title">25% OFF</h1>
+                            <h3 class="offer-description">ON ORDER OVER $999</h3>
+                            <p class="offer-validity">This offer valid on all our items</p>
+                            <button class="btn global-btn-2">BUY NOW</button>
+                        </div>
+
+                        <!-- offer 2 -->
+                        <div class="offer offer-2">
+                            <h1 class="offer-title">25% OFF</h1>
+                            <h3 class="offer-description">ON ORDER OVER $999</h3>
+                            <p class="offer-validity">This offer valid on all our items</p>
+                            <button class="btn global-btn-2">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+
+        <!-- footer -->
+        <footer class="main-footer">
+
+            <!-- top footer -->
+            <div class="top-footer ">
+                <div class="fluid-container clearfix top-footer-container border-bottom">
+
+                    <!-- links container -->
+                    <div class="quick-links-parent clearfix ">
+
+                        <!-- quick links child 1 -->
+                        <div class="quick-links-child">
+                            <div class="title-wrapper">
+                                <h2 class="title after-center">QUICK LINKS</h2>
+                            </div>
+
+                            <a href="#" class="quick-links-item">About Us</a>
+                            <a href="#" class="quick-links-item">Customer Services</a>
+                            <a href="#" class="quick-links-item">Privacy Policy</a>
+                            <a href="#" class="quick-links-item">Site Map</a>
+                            <a href="#" class="quick-links-item">Search Terms</a>
+                            <a href="#" class="quick-links-item">Advanced Search</a>
+                            <a href="#" class="quick-links-item">Orders and Returns</a>
+                            <a href="#" class="quick-links-item">Contact Us</a>
+                        </div>
+
+                        <!--quick links child 2 -->
+                        <div class="quick-links-child">
+                            <div class="title-wrapper">
+                                <h2 class="title">QUICK LINKS</h2>
+                            </div>
+
+                            <a href="#" class="quick-links-item">About Us</a>
+                            <a href="#" class="quick-links-item">Customer Services</a>
+                            <a href="#" class="quick-links-item">Privacy Policy</a>
+                            <a href="#" class="quick-links-item">Site Map</a>
+                            <a href="#" class="quick-links-item">Search Terms</a>
+                            <a href="#" class="quick-links-item">Advanced Search</a>
+                            <a href="#" class="quick-links-item">Orders and Returns</a>
+                            <a href="#" class="quick-links-item">Contact Us</a>
+                        </div>
+
+                        <!-- quick links child-3 -->
+                        <div class="quick-links-child">
+                            <div class="title-wrapper">
+                                <h2 class="title">QUICK LINKS</h2>
+                            </div>
+
+                            <a href="#" class="quick-links-item">About Us</a>
+                            <a href="#" class="quick-links-item">Customer Services</a>
+                            <a href="#" class="quick-links-item">Privacy Policy</a>
+                            <a href="#" class="quick-links-item">Site Map</a>
+                            <a href="#" class="quick-links-item">Search Terms</a>
+                            <a href="#" class="quick-links-item">Advanced Search</a>
+                            <a href="#" class="quick-links-item">Orders and Returns</a>
+                            <a href="#" class="quick-links-item">Contact Us</a>
+                        </div>
+
+                        <!-- news letter form -->
+                        <div class="top-footer-newsletter-form" id="contact">
+                            <div class="title-wrapper">
+                                <h2 class="newsletter-form-title title">NEWSLETTER</h2>
+
+                            </div>
+
+                            <p class="newsletter-form-descrip">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum</p>
+
+                            <input type="text" class="newsletter-form-input" /><br>
+
+                            <button class="btn global-btn-2">SUBMIT</button>
+
+                            <!-- follow links -->
+                            <div class="follow-links">
+                                <a href="#" class="follow-link-item">
+                                    <i class="icon-csfacebook-logo"></i>
+                                </a>
+
+                                <a href="#" class="follow-link-item">
+                                    <i class="icon-cstwitter-logo-silhouette"></i>
+                                </a>
+
+                                <a href="#" class="follow-link-item">
+                                    <i class="icon-csgoogle-plus"></i>
+                                </a>
+
+                                <a href="#" class="follow-link-item">
+                                    <i class="icon-csinstagram-logo"></i>
+                                </a>
+
+                                <a href="#" class="follow-link-item">
+                                    <i class="icon-cspinterest"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- mid footer -->
+            <div class="mid-footer">
+                <div class="fluid-container clearfix mid-footer-container border-bottom">
+
+                    <!-- information item 1 -->
+                    <div class="mid-footer-information">
+                        <div class="title-wrapper">
+                            <h2 class="title">INFORMATION</h2>
+
+                        </div>
+
+                        <p class="information-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                            qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+
+                    <!-- information item 2 -->
+                    <div class="mid-footer-information">
+                        <div class="title-wrapper">
+                            <h2 class="title">INFORMATION</h2>
+                        </div>
+
+                        <p class="information-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                            qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+
+                    <!-- contact details -->
+                    <div class="mid-footer-contact-info" id="location">
+                        <div class="title-wrapper">
+                            <h2 class="title">CONTACT</h2>
+                        </div>
+
+                        <div class="contact-details">
+                            <p class="address">
+                                <i class="icon-cslocation-pointer"></i>
+                                123 Main Road, Your City, NY 1234
+                            </p>
+
+                            <p class="phone-number">
+                                <i class="icon-csphone-receiver"></i>
+                                +123 456 7890
+                            </p>
+
+                            <p class="timings">
+                                <i class="icon-csclock"></i>
+                                7 Days a week from 10:00 am to 6:00 pm
+                            </p>
+
+                            <p class="email">
+                                <i class="icon-csenvelope"></i>
+                                info@psdfreebies.com
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- bottom footer section -->
+            <div class="bottom-footer">
+                <div class="fluid-container clearfix">
+                    <!-- rights section -->
+                    <div class="bottom-footer-copyright">
+                        <p><strong>CarStore</strong> <span>2017.All Rights Reserved</span></p>
+                    </div>
+
+                    <!-- payment info -->
+                    <div class="bottom-footer-payment-info">
+
+                        <a href="#" class="payment-info-item">
+                            <i class="icon-csvisa"></i>
+                        </a>
+
+                        <a href="#" class="payment-info-item">
+                            <i class="icon-csmaster-card-logo"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+
+</body>
+
+</html>

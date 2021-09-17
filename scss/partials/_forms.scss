@@ -1,0 +1,49 @@
+//===========================================
+    // -Forms Start
+//===========================================
+
+// search input
+#search-input{
+    height: rem(30);
+    background-color: #282828;
+    border: 1px solid $border-color;
+    color: $default-font-color;
+    padding: 0 rem(8);
+    float: right;
+    width: 91%;
+    border-right: none;
+
+    @include mq('sm', max){
+        width: 70%;
+        height: rem(24);
+    }
+}
+
+#search-input:focus{
+    outline: none;
+}
+
+
+// for newsletter form
+.newsletter-form-input {
+    height: rem(35);
+    width: 100%;
+    border: none;
+    background-color: #282828;
+    margin-bottom: rem(30);
+    color: $default-font-color;
+}
+
+.newsletter-form-input:focus{
+    outline: none;
+    padding: rem(8);
+}
+
+@include mq('sm', max){
+    .newsletter-form-input{
+        width: 50%;
+    }
+}
+//===========================================
+    // -Forms end
+//===========================================

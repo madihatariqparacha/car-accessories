@@ -1,0 +1,38 @@
+//===========================================
+	// -Helper Classes start
+//===========================================
+
+.text-center{
+	text-align: center;
+}
+
+.clearfix{
+	&:after {
+	content: " "; 
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+ }
+}
+
+.text-right {
+	text-align: right;
+}
+
+.border-bottom {
+	border-bottom: 1px solid $border-color;
+}
+
+.after-center{
+	.title{
+		&:after {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}
+
+//===========================================
+	// -Helper Classes end
+//===========================================
