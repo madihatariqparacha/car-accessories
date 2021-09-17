@@ -1,5 +1,5 @@
 ## Car-Accessories
-https://madihaperacha.github.io/Car-Accessories/
+https://madihatariqparacha.github.io/car-accessories/
 ## Ingredients
 To make this application, we need to cover the following topics:
 HTML - To represent the information on page
